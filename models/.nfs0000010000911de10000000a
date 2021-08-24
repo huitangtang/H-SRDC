@@ -1,0 +1,7 @@
+from models.resnet import resnet
+def model_construct(args):
+    if args.arch.find('resnet') == 0:
+        model = resnet(args)
+        return model
+    else:
+        raise ValueError('The requested model does not exist!')
