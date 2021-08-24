@@ -1,5 +1,7 @@
 # H-SRDC
-Code release for `Towards Uncovering the Intrinsic Data Structures for Unsupervised Domain Adaptation using Structurally Regularized Deep Clustering`, which has been accepted for publication in a future issue of IEEE TRANSACTIONS ON PATTERN ANALYSIS AND MACHINE INTELLIGENCE. The paper is available [here](https://ieeexplore.ieee.org/document/9449976).
+Code release for `Towards Uncovering the Intrinsic Data Structures for Unsupervised Domain Adaptation using Structurally Regularized Deep Clustering`, which has been accepted for publication in a future issue of IEEE TRANSACTIONS ON PATTERN ANALYSIS AND MACHINE INTELLIGENCE. 
+
+The paper is available [here](https://ieeexplore.ieee.org/document/9449976).
 
 ## Requirements
 - python 3.6.4
@@ -7,7 +9,11 @@ Code release for `Towards Uncovering the Intrinsic Data Structures for Unsupervi
 - torchvision 0.5.0
 
 ## Data preparation
-The structure of the used datasets is shown in the folder `./data/datasets/`.  For each adaptation task in an inductive setting, we use all the data on the source domain as the training ones, and make a random, half-half splitting of training and test data for samples of each class on the target domain; the data settings are fixed once prepared. The lists of image names for the training and test sets of each target domain are provided in corresponding folders, e.g., `./data/datasets/Office31/amazon_half/amazon_half.txt`.
+The structure of the used datasets is shown in the folder `./data/datasets/`. 
+
+For each adaptation task in an inductive setting, we use all the data on the source domain as the training ones, and make a random, half-half splitting of training and test data for samples of each class on the target domain; the data settings are fixed once prepared. 
+
+The lists of image names for the training and test sets of each target domain are provided in corresponding files, e.g., `./data/datasets/Office31/amazon_half/amazon_half.txt`.
 
 The original datasets can be downloaded [here](https://github.com/jindongwang/transferlearning/blob/master/data/dataset.md).
 
