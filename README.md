@@ -1,5 +1,5 @@
 # H-SRDC
-Code release for `Towards Uncovering the Intrinsic Data Structures for Unsupervised Domain Adaptation using Structurally Regularized Deep Clustering`, which has been accepted for publication in a future issue of IEEE TRANSACTIONS ON PATTERN ANALYSIS AND MACHINE INTELLIGENCE. 
+Code release for `Towards Uncovering the Intrinsic Data Structures for Unsupervised Domain Adaptation using Structurally Regularized Deep Clustering`, which is published in IEEE TRANSACTIONS ON PATTERN ANALYSIS AND MACHINE INTELLIGENCE in 2022. 
 
 The paper is available [here](https://ieeexplore.ieee.org/document/9449976) or at the [arXiv archive](https://arxiv.org/abs/2012.04280).
 
