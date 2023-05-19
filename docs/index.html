@@ -160,14 +160,14 @@
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   }
 </style>
-	<title>Unsupervised Domain Adaptation via Structurally Regularized Deep Clustering</title>
+	<title>Towards Uncovering the Intrinsic Data Structures for Unsupervised Domain Adaptation using Structurally Regularized Deep Clustering</title>
 </head>
 
 <body>
 <br>
 <span style="font-size:36px">
     <div style="text-align: center;">
-        Unsupervised Domain Adaptation via Structurally Regularized Deep Clustering
+        Towards Uncovering the Intrinsic Data Structures for Unsupervised Domain Adaptation using Structurally Regularized Deep Clustering
     </div>
 </span>
 <br>
@@ -175,25 +175,37 @@
 <br>
 <table align="center" width="700px">
     <tr>
-        <td align="center" width="200px">
+        <td align="center" width="120px">
             <div style="text-align: center;">
                 <span style="font-size:16px"><a href="https://huitangtang.github.io/">Hui Tang</a><sup>1</sup></span>
             </div>
         </td>
+	    
+        <td align="center" width="120px">
+            <div style="text-align: center;">
+                <span style="font-size:16px"><a href="https://xiatian-zhu.github.io/">Xiatian Zhu</a><sup>2</sup></span>
+            </div>
+        </td>
       
-        <td align="center" width="200px">
+        <td align="center" width="120px">
             <div style="text-align: center;">
                 <span style="font-size:16px"><a href="https://scholar.google.com/citations?user=pbNCoTwAAAAJ">Ke Chen</a><sup>1</sup></span>
             </div>
         </td>
         
-        <td align="center" width="200px">
+        <td align="center" width="120px">
             <div style="text-align: center;">
                 <span style="font-size:16px">
                     <a href="http://kuijia.site/">Kui Jia</a>
 <!--                    <sup><img class="round" style="width:20px" src="./resources/corresponding_fig.png">3</sup>-->
                     <sup>&#9993, 1</sup>
                 </span>
+            </div>
+        </td>
+	    
+        <td align="center" width="120px">
+            <div style="text-align: center;">
+                <span style="font-size:16px"><a href="https://orcid.org/0000-0001-5451-7230">C. L. Philip Chen</a><sup>1</sup></span>
             </div>
         </td>
     </tr>
@@ -207,6 +219,11 @@
         <td align="center" width="300px">
             <center>
                 <span style="font-size:16px">South China University of Technology<sup>1</sup></span>
+            </center>
+        </td>
+        <td align="center" width="300px">
+            <center>
+                <span style="font-size:16px">University of Surrey<sup>2</sup></span>
             </center>
         </td>
     </tr>
@@ -233,7 +250,7 @@
             <div style="text-align: center;">
                 <span style="font-size:20px">
                     Code
-                    <a href="https://github.com/Gorilla-Lab-SCUT/SRDC-CVPR2020">[GitHub]</a>
+                    <a href="https://github.com/huitangtang/H-SRDC">[GitHub]</a>
                 </span>
             </div>
         </td>
@@ -242,7 +259,7 @@
             <div style="text-align: center;">
                 <span style="font-size:20px">
                     Paper
-                    <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Tang_Unsupervised_Domain_Adaptation_via_Structurally_Regularized_Deep_Clustering_CVPR_2020_paper.pdf">[CVF]</a>
+                    <a href="https://arxiv.org/pdf/2012.04280">[arXiv]</a>
                 </span>
             </div>
         </td>
@@ -269,18 +286,18 @@
     <tr>
         <td>
             <div style="text-align: center;">
-                <img src="resources/SRDC.png" width="900px">
+                <img src="resources/H-SRDC.png" width="900px">
             </div>
         </td>
     </tr>
     <tr>
         <td>
             <p style="text-align:justify; text-justify:inter-ideograph;">
-		To address a potential issue of damaging the intrinsic data discrimination by explicitly learning domain-aligned features, 
-		we propose a source-regularized, deep discriminative clustering method in order to directly uncover the intrinsic discrimination among target data, 
-		termed as Structurally Regularized Deep Clustering (SRDC). 
-		In SRDC, we also design useful ingredients to enhance target discrimination with clustering of intermediate network features, 
-		and to enhance structural regularization with soft selection of less divergent source examples.
+		We are motivated by a Unsupervised domain adaptation (UDA) assumption of structural similarity across domains, 
+		and propose to directly uncover the intrinsic target discrimination via constrained clustering, 
+		where we constrain the clustering solutions using structural source regularization that hinges on the very same assumption. 
+		Technically, we propose a hybrid model of Structurally Regularized Deep Clustering, 
+		which integrates the regularized discriminative clustering of target data with a generative one, and we thus term our method as H-SRDC.
             </p>
         </td>
     </tr>
@@ -297,23 +314,23 @@
     <tr>
         <td>
             <p style="text-align:justify; text-justify:inter-ideograph;">
-		Unsupervised domain adaptation (UDA) is to make predictions for unlabeled data on a target domain, 
-		given labeled data on a source domain whose distribution shifts from the target one. 
-		Mainstream UDA methods learn aligned features between the two domains, 
-		such that a classifier trained on the source features can be readily applied to the target ones. 
-		However, such a transferring strategy has a potential risk of damaging the intrinsic discrimination of target data. 
-		To alleviate this risk, we are motivated by the assumption of structural domain similarity, 
-		and propose to directly uncover the intrinsic target discrimination via discriminative clustering of target data. 
-		We constrain the clustering solutions using structural source regularization that hinges on our assumed structural domain similarity. 
-		Technically, we use a flexible framework of deep network based discriminative clustering 
-		that minimizes the KL divergence between predictive label distribution of the network and an introduced auxiliary one; 
-		replacing the auxiliary distribution with that formed by ground-truth labels of source data 
-		implements the structural source regularization via a simple strategy of joint network training. 
-		We term our proposed method as Structurally Regularized Deep Clustering (SRDC), 
-		where we also enhance target discrimination with clustering of intermediate network features, 
-		and enhance structural regularization with soft selection of less divergent source examples. 
-		Careful ablation studies show the efficacy of our proposed SRDC. 
-		Notably, with no explicit domain alignment, SRDC outperforms all existing methods on three UDA benchmarks.
+		Unsupervised domain adaptation (UDA) is to learn classification models that make predictions for unlabeled data on a target domain, 
+		given labeled data on a source domain whose distribution diverges from the target one. 
+		Mainstream UDA methods strive to learn domain-aligned features such that 
+		classifiers trained on the source features can be readily applied to the target ones. 
+		Although impressive results have been achieved, these methods have a potential risk of damaging the <i>intrinsic</i> data structures of target discrimination, 
+		raising an issue of generalization particularly for UDA tasks in an inductive setting. 
+		To address this issue, we are motivated by a UDA assumption of <i>structural similarity</i> across domains, 
+		and propose to directly uncover the intrinsic target discrimination via constrained clustering, 
+		where we constrain the clustering solutions using structural source regularization that hinges on the very same assumption. 
+		Technically, we propose a hybrid model of <i>Structurally Regularized Deep Clustering</i>, 
+		which integrates the regularized discriminative clustering of target data with a generative one, 
+		and we thus term our method as H-SRDC. 
+		Our hybrid model is based on a deep clustering framework that minimizes the Kullback-Leibler divergence between the distribution of network prediction and an auxiliary one, 
+		where we impose structural regularization by learning domain-shared classifier and cluster centroids. 
+		By enriching the structural similarity assumption, we are able to extend H-SRDC for a pixel-level UDA task of semantic segmentation. 
+		We conduct extensive experiments on seven UDA benchmarks of image classification and semantic segmentation. 
+		With no explicit feature alignment, our proposed H-SRDC outperforms all the existing methods under both the inductive and transductive settings.
             </p>
         </td>
     </tr>
@@ -619,12 +636,15 @@ This is the end of next edition!!! -->
 </div>
       <pre>
   	<code>
-		@inproceedings{tang2020unsupervised,
-		  title={Unsupervised domain adaptation via structurally regularized deep clustering},
-		  author={Tang, Hui and Chen, Ke and Jia, Kui},
-		  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
-		  pages={8725--8735},
-		  year={2020}
+		@article{tang2021towards,
+		  author={Tang, Hui and Zhu, Xiatian and Chen, Ke and Jia, Kui and Chen, C. L. Philip},
+		  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+		  title={Towards Uncovering the Intrinsic Data Structures for Unsupervised Domain Adaptation Using Structurally Regularized Deep Clustering}, 
+		  year={2022},
+		  volume={44},
+		  number={10},
+		  pages={6517-6533},
+		  doi={10.1109/TPAMI.2021.3087830}
 		}
   	</code>
       </pre>
